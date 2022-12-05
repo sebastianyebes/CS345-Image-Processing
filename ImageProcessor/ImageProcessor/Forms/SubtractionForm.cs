@@ -18,6 +18,17 @@ namespace ImageProcessor
             pictureBox1.Image = image;
         }
 
+        private void OpenBackgroundDialog_FileOk(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            background = new Bitmap(OpenBackgroundDialog.FileName);
+            pictureBox2.Image = background;
+        }
+
+        private void LoadBackground_Click(object sender, EventArgs e)
+        {
+            OpenBackgroundDialog.ShowDialog();
+        }
+
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();

@@ -39,6 +39,7 @@
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.OpenImageDialog = new System.Windows.Forms.OpenFileDialog();
+            this.OpenBackgroundDialog = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -97,6 +98,7 @@
             this.LoadBackground.TabIndex = 17;
             this.LoadBackground.Text = "Load Background";
             this.LoadBackground.UseVisualStyleBackColor = true;
+            this.LoadBackground.Click += new System.EventHandler(this.LoadBackground_Click);
             // 
             // Subtract
             // 
@@ -147,6 +149,11 @@
             this.OpenImageDialog.FileName = "openFileDialog1";
             this.OpenImageDialog.FileOk += new System.ComponentModel.CancelEventHandler(this.OpenImageDialog_FileOk);
             // 
+            // OpenBackgroundDialog
+            // 
+            this.OpenBackgroundDialog.FileName = "openFileDialog1";
+            this.OpenBackgroundDialog.FileOk += new System.ComponentModel.CancelEventHandler(this.OpenBackgroundDialog_FileOk);
+            // 
             // SubtractionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -185,5 +192,6 @@
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
         private System.Windows.Forms.OpenFileDialog OpenImageDialog;
+        private System.Windows.Forms.OpenFileDialog OpenBackgroundDialog;
     }
 }
