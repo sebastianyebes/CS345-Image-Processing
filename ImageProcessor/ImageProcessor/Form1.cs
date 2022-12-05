@@ -46,6 +46,12 @@ namespace ImageProcessor
             pictureBox2.Image = processed;
         }
 
+        private void Sepia_Click(object sender, EventArgs e)
+        {
+            ImageProcessLib.Sepia(ref loaded, ref processed);
+            pictureBox2.Image = processed;
+        }
+
         private void Greyscale_Click(object sender, EventArgs e)
         {
             ImageProcessLib.Greyscale(ref loaded, ref processed);

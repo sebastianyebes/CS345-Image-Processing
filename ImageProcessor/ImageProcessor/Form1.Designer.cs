@@ -140,6 +140,7 @@
             this.Sepia.TabIndex = 13;
             this.Sepia.Text = "Sepia";
             this.Sepia.UseVisualStyleBackColor = true;
+            this.Sepia.Click += new System.EventHandler(this.Sepia_Click);
             // 
             // Subtraction
             // 
