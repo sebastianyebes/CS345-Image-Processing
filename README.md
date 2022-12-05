@@ -1,1 +1,1 @@
-# CS345-Image_Processer
+# CS345-Image_Processor
