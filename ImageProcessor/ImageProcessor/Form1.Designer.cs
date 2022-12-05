@@ -35,9 +35,9 @@
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.Histogram = new System.Windows.Forms.Button();
+            this.Sepia = new System.Windows.Forms.Button();
+            this.Subtraction = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.Greyscale = new System.Windows.Forms.Button();
@@ -119,38 +119,38 @@
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
             // 
-            // button3
+            // Histogram
             // 
-            this.button3.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button3.Location = new System.Drawing.Point(769, 255);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(95, 32);
-            this.button3.TabIndex = 12;
-            this.button3.Text = "Histogram";
-            this.button3.UseVisualStyleBackColor = true;
+            this.Histogram.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Histogram.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Histogram.Location = new System.Drawing.Point(769, 255);
+            this.Histogram.Name = "Histogram";
+            this.Histogram.Size = new System.Drawing.Size(95, 32);
+            this.Histogram.TabIndex = 12;
+            this.Histogram.Text = "Histogram";
+            this.Histogram.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // Sepia
             // 
-            this.button4.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button4.Location = new System.Drawing.Point(880, 255);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(95, 32);
-            this.button4.TabIndex = 13;
-            this.button4.Text = "Sepia";
-            this.button4.UseVisualStyleBackColor = true;
+            this.Sepia.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Sepia.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Sepia.Location = new System.Drawing.Point(880, 255);
+            this.Sepia.Name = "Sepia";
+            this.Sepia.Size = new System.Drawing.Size(95, 32);
+            this.Sepia.TabIndex = 13;
+            this.Sepia.Text = "Sepia";
+            this.Sepia.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // Subtraction
             // 
-            this.button5.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button5.Location = new System.Drawing.Point(824, 307);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(102, 32);
-            this.button5.TabIndex = 15;
-            this.button5.Text = "Subtraction";
-            this.button5.UseVisualStyleBackColor = true;
+            this.Subtraction.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Subtraction.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Subtraction.Location = new System.Drawing.Point(824, 307);
+            this.Subtraction.Name = "Subtraction";
+            this.Subtraction.Size = new System.Drawing.Size(102, 32);
+            this.Subtraction.TabIndex = 15;
+            this.Subtraction.Text = "Subtraction";
+            this.Subtraction.UseVisualStyleBackColor = true;
             // 
             // openFileDialog1
             // 
@@ -243,9 +243,9 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(textBox6);
             this.Controls.Add(this.Greyscale);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.Subtraction);
+            this.Controls.Add(this.Sepia);
+            this.Controls.Add(this.Histogram);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);
@@ -271,9 +271,9 @@
         private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button Histogram;
+        private System.Windows.Forms.Button Sepia;
+        private System.Windows.Forms.Button Subtraction;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.Button Greyscale;
