@@ -21,22 +21,17 @@ namespace ImageProcessor
 
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            openFileDialog1.ShowDialog();
+            OpenFileDialog.ShowDialog();
         }
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            saveFileDialog1.ShowDialog();           
+                    
         }
 
-        private void saveFileDialog1_FileOk(object sender, EventArgs e)
+        private void OpenFileDialog_FileOk(object sender, CancelEventArgs e)
         {
-            saveFileDialog1.ShowDialog();
-        }
-
-        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
-        {
-            loaded = new Bitmap(openFileDialog1.FileName);
+            loaded = new Bitmap(OpenFileDialog.FileName);
             pictureBox1.Image = loaded;
         }
 

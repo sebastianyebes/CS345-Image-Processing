@@ -38,12 +38,12 @@
             this.Histogram = new System.Windows.Forms.Button();
             this.Sepia = new System.Windows.Forms.Button();
             this.Subtraction = new System.Windows.Forms.Button();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.Greyscale = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.Inversion = new System.Windows.Forms.Button();
+            this.OpenFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.SaveFileDialog = new System.Windows.Forms.SaveFileDialog();
             textBox6 = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -152,15 +152,6 @@
             this.Subtraction.UseVisualStyleBackColor = true;
             this.Subtraction.Click += new System.EventHandler(this.Subtraction_Click);
             // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
-            this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
-            // 
-            // saveFileDialog1
-            // 
-            this.saveFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.saveFileDialog1_FileOk);
-            // 
             // Greyscale
             // 
             this.Greyscale.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -211,6 +202,11 @@
             this.Inversion.UseVisualStyleBackColor = true;
             this.Inversion.Click += new System.EventHandler(this.Inversion_Click);
             // 
+            // OpenFileDialog
+            // 
+            this.OpenFileDialog.FileName = "openFileDialog1";
+            this.OpenFileDialog.FileOk += new System.ComponentModel.CancelEventHandler(this.OpenFileDialog_FileOk);
+            // 
             // ImageProcessForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -252,12 +248,12 @@
         private System.Windows.Forms.Button Histogram;
         private System.Windows.Forms.Button Sepia;
         private System.Windows.Forms.Button Subtraction;
-        private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.Button Greyscale;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button Inversion;
+        private System.Windows.Forms.OpenFileDialog OpenFileDialog;
+        private System.Windows.Forms.SaveFileDialog SaveFileDialog;
     }
 }
 
