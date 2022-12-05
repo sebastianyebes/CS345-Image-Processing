@@ -91,9 +91,9 @@
             // 
             this.LoadBackground.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LoadBackground.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.LoadBackground.Location = new System.Drawing.Point(480, 357);
+            this.LoadBackground.Location = new System.Drawing.Point(466, 357);
             this.LoadBackground.Name = "LoadBackground";
-            this.LoadBackground.Size = new System.Drawing.Size(130, 32);
+            this.LoadBackground.Size = new System.Drawing.Size(145, 32);
             this.LoadBackground.TabIndex = 17;
             this.LoadBackground.Text = "Load Background";
             this.LoadBackground.UseVisualStyleBackColor = true;
