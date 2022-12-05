@@ -85,15 +85,15 @@ namespace ImageProcessorLib
 
         public static void Subtract(ref Bitmap image, ref Bitmap background, ref Bitmap processed)
         {
-            processed = new Bitmap(background.Width, background.Height);
+            processed = new Bitmap(image.Width, image.Height);
 
             Color myGreen = Color.FromArgb(0, 0, 255);
             int greyGreen = (myGreen.R + myGreen.G + myGreen.B) / 3;
             int threshold = 5;
 
-            for(int i = 0; i < background.Height; i++)
+            for(int i = 0; i < image.Width; i++)
             {
-                for(int j = 0; j < background.Width; j++)
+                for(int j = 0; j < image.Height; j++)
                 {
                     Color pixel = image.GetPixel(i, j);
                     Color backPixel = background.GetPixel(i, j);
@@ -105,11 +105,11 @@ namespace ImageProcessorLib
                     // Check conditions & Set pixel to the calculated one
                     if (subtractValue > threshold)
                     {
-                        processed.SetPixel(i, j, backPixel);
+                        processed.SetPixel(i, j, pixel);
                     }
                     else
                     {
-                        processed.SetPixel(i,j, pixel);
+                        processed.SetPixel(i,j, backPixel);
                     }
                 }
             }
