@@ -1,4 +1,12 @@
-﻿using System.Drawing;
+﻿/* 
+CEB IMAGE PROCESSING METHODS REPOSITORY
+Copyright (C) 2022 Project - All Rights Reserved
+
+CARL SEBASTIAN T. YEBES
+yebes77@gmail.com
+*/
+
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace ImageProcessorLib
