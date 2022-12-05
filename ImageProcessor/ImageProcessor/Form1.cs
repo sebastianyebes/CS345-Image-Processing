@@ -2,7 +2,7 @@
 using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
-using ImageProcessor;
+using ImageProcessorLib;
 
 namespace ImageProcessor
 {
@@ -47,7 +47,8 @@ namespace ImageProcessor
 
         private void Greyscale_Click(object sender, EventArgs e)
         {
-
+            ImageProcessLib.Greyscale(ref loaded, ref processed);
+            pictureBox2.Image = processed;
         }
     }
 }
