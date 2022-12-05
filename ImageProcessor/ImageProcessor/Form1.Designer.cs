@@ -43,8 +43,6 @@
             this.Greyscale = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.ValueBox = new System.Windows.Forms.TextBox();
             this.Inversion = new System.Windows.Forms.Button();
             textBox6 = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
@@ -123,7 +121,7 @@
             // 
             this.Histogram.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Histogram.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Histogram.Location = new System.Drawing.Point(769, 255);
+            this.Histogram.Location = new System.Drawing.Point(770, 222);
             this.Histogram.Name = "Histogram";
             this.Histogram.Size = new System.Drawing.Size(95, 32);
             this.Histogram.TabIndex = 12;
@@ -134,7 +132,7 @@
             // 
             this.Sepia.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Sepia.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Sepia.Location = new System.Drawing.Point(880, 255);
+            this.Sepia.Location = new System.Drawing.Point(881, 222);
             this.Sepia.Name = "Sepia";
             this.Sepia.Size = new System.Drawing.Size(95, 32);
             this.Sepia.TabIndex = 13;
@@ -146,7 +144,7 @@
             // 
             this.Subtraction.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Subtraction.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Subtraction.Location = new System.Drawing.Point(824, 307);
+            this.Subtraction.Location = new System.Drawing.Point(825, 274);
             this.Subtraction.Name = "Subtraction";
             this.Subtraction.Size = new System.Drawing.Size(102, 32);
             this.Subtraction.TabIndex = 15;
@@ -166,7 +164,7 @@
             // 
             this.Greyscale.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Greyscale.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Greyscale.Location = new System.Drawing.Point(769, 203);
+            this.Greyscale.Location = new System.Drawing.Point(770, 170);
             this.Greyscale.Name = "Greyscale";
             this.Greyscale.Size = new System.Drawing.Size(95, 32);
             this.Greyscale.TabIndex = 16;
@@ -192,7 +190,7 @@
             this.textBox2.BackColor = System.Drawing.SystemColors.Menu;
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(751, 76);
+            this.textBox2.Location = new System.Drawing.Point(758, 111);
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(241, 20);
@@ -200,31 +198,11 @@
             this.textBox2.Text = "\"A Picture Paints a Million Bytes\"";
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox5
-            // 
-            this.textBox5.BackColor = System.Drawing.SystemColors.Menu;
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(751, 137);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(78, 20);
-            this.textBox5.TabIndex = 20;
-            this.textBox5.Text = "Value:";
-            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // ValueBox
-            // 
-            this.ValueBox.Location = new System.Drawing.Point(835, 135);
-            this.ValueBox.Name = "ValueBox";
-            this.ValueBox.Size = new System.Drawing.Size(125, 22);
-            this.ValueBox.TabIndex = 21;
-            // 
             // Inversion
             // 
             this.Inversion.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Inversion.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Inversion.Location = new System.Drawing.Point(880, 203);
+            this.Inversion.Location = new System.Drawing.Point(881, 170);
             this.Inversion.Name = "Inversion";
             this.Inversion.Size = new System.Drawing.Size(95, 32);
             this.Inversion.TabIndex = 22;
@@ -238,8 +216,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1026, 419);
             this.Controls.Add(this.Inversion);
-            this.Controls.Add(this.ValueBox);
-            this.Controls.Add(this.textBox5);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(textBox6);
@@ -280,8 +256,6 @@
         private System.Windows.Forms.Button Greyscale;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox ValueBox;
         private System.Windows.Forms.Button Inversion;
     }
 }
