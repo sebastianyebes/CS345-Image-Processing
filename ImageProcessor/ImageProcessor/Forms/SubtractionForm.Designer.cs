@@ -110,6 +110,7 @@
             this.Subtract.TabIndex = 18;
             this.Subtract.Text = "Subtract";
             this.Subtract.UseVisualStyleBackColor = true;
+            this.Subtract.Click += new System.EventHandler(this.Subtract_Click);
             // 
             // menuStrip1
             // 
