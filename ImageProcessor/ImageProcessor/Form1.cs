@@ -19,11 +19,6 @@ namespace ImageProcessor
 
         }
 
-        private void greyScaleToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
             openFileDialog1.ShowDialog();
@@ -43,6 +38,12 @@ namespace ImageProcessor
         {
             loaded = new Bitmap(openFileDialog1.FileName);
             pictureBox1.Image = loaded;
+        }
+
+        private void Inversion_Click(object sender, EventArgs e)
+        {
+            ImageProcessLib.Inversion(ref loaded, ref processed);
+            pictureBox2.Image = processed;
         }
 
         private void Greyscale_Click(object sender, EventArgs e)

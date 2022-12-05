@@ -35,7 +35,6 @@
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -46,6 +45,7 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.ValueBox = new System.Windows.Forms.TextBox();
+            this.Inversion = new System.Windows.Forms.Button();
             textBox6 = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -118,17 +118,6 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button2.Location = new System.Drawing.Point(880, 203);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(95, 32);
-            this.button2.TabIndex = 11;
-            this.button2.Text = "Inversion";
-            this.button2.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
@@ -230,11 +219,24 @@
             this.ValueBox.Size = new System.Drawing.Size(125, 22);
             this.ValueBox.TabIndex = 21;
             // 
+            // Inversion
+            // 
+            this.Inversion.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Inversion.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Inversion.Location = new System.Drawing.Point(880, 203);
+            this.Inversion.Name = "Inversion";
+            this.Inversion.Size = new System.Drawing.Size(95, 32);
+            this.Inversion.TabIndex = 22;
+            this.Inversion.Text = "Inversion";
+            this.Inversion.UseVisualStyleBackColor = true;
+            this.Inversion.Click += new System.EventHandler(this.Inversion_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1026, 419);
+            this.Controls.Add(this.Inversion);
             this.Controls.Add(this.ValueBox);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.textBox2);
@@ -244,7 +246,6 @@
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);
@@ -270,7 +271,6 @@
         private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
@@ -281,6 +281,7 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox ValueBox;
+        private System.Windows.Forms.Button Inversion;
     }
 }
 
