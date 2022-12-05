@@ -6,10 +6,10 @@ using ImageProcessorLib;
 
 namespace ImageProcessor
 {
-    public partial class Form1 : Form
+    public partial class ImageProcessForm : Form
     {
         Bitmap loaded, processed;
-        public Form1()
+        public ImageProcessForm()
         {
             InitializeComponent();
         }
