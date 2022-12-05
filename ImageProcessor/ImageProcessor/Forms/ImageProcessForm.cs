@@ -52,6 +52,12 @@ namespace ImageProcessor
             pictureBox2.Image = processed;
         }
 
+        private void Subtraction_Click(object sender, EventArgs e)
+        {
+            SubtractionForm form2 = new SubtractionForm();
+            form2.ShowDialog();
+        }
+
         private void Greyscale_Click(object sender, EventArgs e)
         {
             ImageProcessLib.Greyscale(ref loaded, ref processed);

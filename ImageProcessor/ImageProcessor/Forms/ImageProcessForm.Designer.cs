@@ -150,6 +150,7 @@
             this.Subtraction.TabIndex = 15;
             this.Subtraction.Text = "Subtraction";
             this.Subtraction.UseVisualStyleBackColor = true;
+            this.Subtraction.Click += new System.EventHandler(this.Subtraction_Click);
             // 
             // openFileDialog1
             // 
@@ -210,7 +211,7 @@
             this.Inversion.UseVisualStyleBackColor = true;
             this.Inversion.Click += new System.EventHandler(this.Inversion_Click);
             // 
-            // Form1
+            // ImageProcessForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -228,7 +229,7 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.MinimumSize = new System.Drawing.Size(1044, 466);
-            this.Name = "Form1";
+            this.Name = "ImageProcessForm";
             this.Text = "Image Processor";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
