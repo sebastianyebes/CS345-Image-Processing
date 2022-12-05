@@ -6,6 +6,7 @@ CARL SEBASTIAN T. YEBES
 yebes77@gmail.com
 */
 
+using System;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -78,6 +79,38 @@ namespace ImageProcessorLib
                     // Set pixel to the calculated one
                     Color sepia = Color.FromArgb(sR, sG, sB);
                     processed.SetPixel(i, j, sepia);
+                }
+            }
+        }
+
+        public static void Subtract(ref Bitmap image, ref Bitmap background, ref Bitmap processed)
+        {
+            processed = new Bitmap(background.Width, background.Height);
+
+            Color myGreen = Color.FromArgb(0, 0, 255);
+            int greyGreen = (myGreen.R + myGreen.G + myGreen.B) / 3;
+            int threshold = 5;
+
+            for(int i = 0; i < background.Height; i++)
+            {
+                for(int j = 0; j < background.Width; j++)
+                {
+                    Color pixel = image.GetPixel(i, j);
+                    Color backPixel = background.GetPixel(i, j);
+
+                    // Calculate formula for sepia
+                    int grey = (pixel.R + pixel.G + pixel.B) / 3;
+                    int subtractValue = Math.Abs(grey - greyGreen);
+
+                    // Check conditions & Set pixel to the calculated one
+                    if (subtractValue > threshold)
+                    {
+                        processed.SetPixel(i, j, backPixel);
+                    }
+                    else
+                    {
+                        processed.SetPixel(i,j, pixel);
+                    }
                 }
             }
         }
