@@ -7,5 +7,5 @@ This program lets you manipulate or process digital images to the certain filter
 - Greyscale
 - Color Inversion
 - Sepia
-- Histogram
+- Histogram (graph & data of image)
 - Subtraction
