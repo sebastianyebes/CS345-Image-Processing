@@ -37,6 +37,13 @@ namespace ImageProcessor
         {
             loaded = new Bitmap(OpenFileDialog.FileName);
             originalImage.Image = loaded;
+
+            CopyImage.Enabled = true;
+            Greyscale.Enabled = true;
+            Inversion.Enabled = true;
+            Sepia.Enabled = true;
+            Histogram.Enabled = true;
+            saveToolStripMenuItem.Enabled = true;
         }
 
         private void Inversion_Click(object sender, EventArgs e)

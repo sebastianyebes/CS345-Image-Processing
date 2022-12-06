@@ -91,6 +91,7 @@
             // 
             // LoadBackground
             // 
+            this.LoadBackground.Enabled = false;
             this.LoadBackground.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LoadBackground.ForeColor = System.Drawing.SystemColors.ControlText;
             this.LoadBackground.Location = new System.Drawing.Point(466, 357);
@@ -103,6 +104,7 @@
             // 
             // Subtract
             // 
+            this.Subtract.Enabled = false;
             this.Subtract.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Subtract.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Subtract.Location = new System.Drawing.Point(857, 357);
@@ -120,7 +122,7 @@
             this.fileToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1107, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(1107, 28);
             this.menuStrip1.TabIndex = 19;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -130,11 +132,12 @@
             this.saveToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 26);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // saveToolStripMenuItem
             // 
+            this.saveToolStripMenuItem.Enabled = false;
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
             this.saveToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.saveToolStripMenuItem.Text = "Save";

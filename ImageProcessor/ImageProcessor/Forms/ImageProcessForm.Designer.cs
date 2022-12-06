@@ -33,6 +33,7 @@
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.originalImage = new System.Windows.Forms.PictureBox();
             this.processedImage = new System.Windows.Forms.PictureBox();
             this.Histogram = new System.Windows.Forms.Button();
@@ -44,7 +45,6 @@
             this.Inversion = new System.Windows.Forms.Button();
             this.OpenFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.SaveFileDialog = new System.Windows.Forms.SaveFileDialog();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.CopyImage = new System.Windows.Forms.Button();
             textBox6 = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
@@ -89,16 +89,24 @@
             // openToolStripMenuItem
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(128, 26);
             this.openToolStripMenuItem.Text = "Open";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
             // saveToolStripMenuItem
             // 
+            this.saveToolStripMenuItem.Enabled = false;
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
             this.saveToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.saveToolStripMenuItem.Text = "Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(128, 26);
+            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // originalImage
             // 
@@ -122,6 +130,7 @@
             // 
             // Histogram
             // 
+            this.Histogram.Enabled = false;
             this.Histogram.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Histogram.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Histogram.Location = new System.Drawing.Point(881, 255);
@@ -134,6 +143,7 @@
             // 
             // Sepia
             // 
+            this.Sepia.Enabled = false;
             this.Sepia.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Sepia.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Sepia.Location = new System.Drawing.Point(770, 255);
@@ -159,6 +169,7 @@
             // 
             // Greyscale
             // 
+            this.Greyscale.Enabled = false;
             this.Greyscale.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Greyscale.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Greyscale.Location = new System.Drawing.Point(770, 203);
@@ -197,6 +208,7 @@
             // 
             // Inversion
             // 
+            this.Inversion.Enabled = false;
             this.Inversion.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Inversion.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Inversion.Location = new System.Drawing.Point(881, 203);
@@ -216,15 +228,9 @@
             // 
             this.SaveFileDialog.FileOk += new System.ComponentModel.CancelEventHandler(this.SaveFileDialog_FileOk);
             // 
-            // exitToolStripMenuItem
-            // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.exitToolStripMenuItem.Text = "Exit";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
-            // 
             // CopyImage
             // 
+            this.CopyImage.Enabled = false;
             this.CopyImage.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CopyImage.ForeColor = System.Drawing.SystemColors.ControlText;
             this.CopyImage.Location = new System.Drawing.Point(814, 156);

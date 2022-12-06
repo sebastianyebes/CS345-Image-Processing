@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.Linq.Expressions;
 using System.Windows.Forms;
 using ImageProcessorLib;
 
@@ -8,6 +9,7 @@ namespace ImageProcessor
     public partial class SubtractionForm : Form
     {
         Bitmap image, background, processed;
+        bool imageEnable = false;
         public SubtractionForm()
         {
             InitializeComponent();
@@ -17,12 +19,18 @@ namespace ImageProcessor
         {
             image = new Bitmap(OpenImageDialog.FileName);
             loadPicture.Image = image;
+
+            imageEnable = true;
+            LoadBackground.Enabled = true;
         }
 
         private void OpenBackgroundDialog_FileOk(object sender, System.ComponentModel.CancelEventArgs e)
         {
             background = new Bitmap(OpenBackgroundDialog.FileName);
             loadBg.Image = background;
+
+            if (imageEnable)
+                Subtract.Enabled = true;
         }
 
         private void LoadBackground_Click(object sender, EventArgs e)
@@ -31,9 +39,11 @@ namespace ImageProcessor
         }
 
         private void Subtract_Click(object sender, EventArgs e)
-        {
+        {     
             ImageProcessLib.Subtract(ref image, ref background, ref processed);
             processedPicture.Image = processed;
+
+            saveToolStripMenuItem.Enabled = true;
         }
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
