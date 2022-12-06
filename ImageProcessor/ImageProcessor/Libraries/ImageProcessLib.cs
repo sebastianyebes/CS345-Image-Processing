@@ -13,6 +13,32 @@ namespace ImageProcessorLib
 {
     public class ImageProcessLib
     {
+        /// <summary>
+        /// Lets you copy the loaded image, and pastes it on the processed image variable
+        /// </summary>
+        /// <param name="loaded"> Original Image </param>
+        /// <param name="processed"> Processed Image </param>
+        public static void CopyImage(ref Bitmap loaded, ref Bitmap processed)
+        {
+            processed = new Bitmap(loaded.Width, loaded.Height);
+
+            for (int i = 0; i < loaded.Width; i++)
+            {
+                for (int j = 0; j < loaded.Height; j++)
+                {
+                    Color pixel = loaded.GetPixel(i, j);
+
+                    // Set pixel from the pixel we got in pixel variable
+                    processed.SetPixel(i, j, pixel);
+                }
+            }
+        }
+
+        /// <summary>
+        /// Lets you copy the loaded image, makes it greyscale, and pastes it on the processed image variable
+        /// </summary>
+        /// <param name="loaded"> Original Image </param>
+        /// <param name="processed"> Processed Image</param>
         public static void Greyscale(ref Bitmap loaded, ref Bitmap processed)
         {
             processed = new Bitmap(loaded.Width, loaded.Height);
@@ -33,6 +59,11 @@ namespace ImageProcessorLib
             }
         }
 
+        /// <summary>
+        /// Lets you copy the loaded image, makes it a color inversion, and pastes it on the processed image variable
+        /// </summary>
+        /// <param name="loaded"> Original Image </param>
+        /// <param name="processed"> Processed Image </param>
         public static void Inversion(ref Bitmap loaded, ref Bitmap processed)
         {
             processed = new Bitmap(loaded.Width, loaded.Height);
@@ -55,6 +86,11 @@ namespace ImageProcessorLib
             }
         }
 
+        /// <summary>
+        /// Lets you copy the loaded image, makes it sepia, and pastes it on the processed image variable
+        /// </summary>
+        /// <param name="loaded"> Original Image </param>
+        /// <param name="processed"> Processed Image </param>
         public static void Sepia(ref Bitmap loaded, ref Bitmap processed)
         {
             processed = new Bitmap(loaded.Width, loaded.Height);
@@ -85,6 +121,12 @@ namespace ImageProcessorLib
             }
         }
 
+        /// <summary>
+        /// Lets you copy the loaded image and background image, subtracts it, and pastes it on the processed image variable
+        /// </summary>
+        /// <param name="image"> Original Image with greenscreen </param>
+        /// <param name="background"> Background Image </param>
+        /// <param name="processed"> Processed Image </param>
         public static void Subtract(ref Bitmap image, ref Bitmap background, ref Bitmap processed)
         {
             processed = new Bitmap(image.Width, image.Height);
@@ -113,22 +155,6 @@ namespace ImageProcessorLib
                     {
                         processed.SetPixel(i,j, backPixel);
                     }
-                }
-            }
-        }
-
-        public static void CopyImage(ref Bitmap loaded, ref Bitmap processed)
-        {
-            processed = new Bitmap(loaded.Width, loaded.Height);
-
-            for (int i = 0; i < loaded.Width; i++)
-            {
-                for (int j = 0; j < loaded.Height; j++)
-                {
-                    Color pixel = loaded.GetPixel(i, j); 
-
-                    // Set pixel from the pixel we got in pixel variable
-                    processed.SetPixel(i, j, pixel);
                 }
             }
         }
