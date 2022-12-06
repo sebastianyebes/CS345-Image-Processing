@@ -59,10 +59,12 @@ namespace ImageProcessor
 
         private void SaveFileDialog_FileOk(object sender, CancelEventArgs e)
         {
-            if(SaveFileDialog.ShowDialog() == DialogResult.OK)
-            {
-                processedImage.Image.Save(SaveFileDialog.FileName);
-            }
+            processedImage.Image.Save(SaveFileDialog.FileName);
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         private void Greyscale_Click(object sender, EventArgs e)
