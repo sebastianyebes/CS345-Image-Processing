@@ -73,6 +73,12 @@ namespace ImageProcessor
             processedImage.Image = processed;
         }
 
+        private void Histogram_Click(object sender, EventArgs e)
+        {
+            ImageProcessLib.Histogram(ref loaded, ref processed);
+            processedImage.Image = processed;
+        }
+
         private void Greyscale_Click(object sender, EventArgs e)
         {
             ImageProcessLib.Greyscale(ref loaded, ref processed);

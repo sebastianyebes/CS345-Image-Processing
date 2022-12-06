@@ -8,6 +8,7 @@ yebes77@gmail.com
 
 using System;
 using System.Drawing;
+using System.Drawing.Imaging;
 
 namespace ImageProcessorLib
 {
@@ -117,6 +118,60 @@ namespace ImageProcessorLib
                     // Set pixel to the calculated one
                     Color sepia = Color.FromArgb(sR, sG, sB);
                     processed.SetPixel(i, j, sepia);
+                }
+            }
+        }
+        
+        /// <summary>
+        /// Lets you make a histogram for a specific image (original image)
+        /// </summary>
+        /// <param name="original"> Original Image </param>
+        /// <param name="processed"> Histogram Image</param>
+        public static void Histogram(ref Bitmap original, ref Bitmap processed)
+        {
+            Color temp, gray;
+            Byte graydata;
+
+            // Convert original image to greyscale
+            for(int i = 0; i < original.Width; i++)
+            {
+                for(int j = 0; j < original.Height; j++)
+                {
+                    temp = original.GetPixel(i, j);
+                    graydata = (byte)((temp.R + temp.G + temp.B) / 3);
+                    gray = Color.FromArgb(graydata, graydata, graydata);
+                    original.SetPixel(i, j, gray);
+                }
+            }
+
+            // Histogram 1D data
+            int[] histogramData = new int[256];
+            for(int i = 0; i < original.Width; i++)
+            {
+                for(int j = 0; j < original.Height; j++)
+                {
+                    temp = original.GetPixel(i, j);
+                    histogramData[temp.R]++;
+                }
+            }
+
+            // Bitmap Graph Generate
+            // Setting empty bitmap with BG color
+            processed = new Bitmap(256, 800);
+            for(int i = 0; i < 256; i++)
+            {
+                for(int j = 0; j < 800; j++)
+                {
+                    processed.SetPixel(i, j, Color.White);
+                }
+            }
+
+            // Map or Plot points based from histogramData
+            for(int i = 0; i < 256; i++)
+            {
+                for(int j = 0; j < Math.Min(histogramData[i] / 5, processed.Height - 1); j++)
+                {
+                    processed.SetPixel(i, (processed.Height - 1) - j, Color.Black);
                 }
             }
         }

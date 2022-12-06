@@ -130,6 +130,7 @@
             this.Histogram.TabIndex = 12;
             this.Histogram.Text = "Histogram";
             this.Histogram.UseVisualStyleBackColor = true;
+            this.Histogram.Click += new System.EventHandler(this.Histogram_Click);
             // 
             // Sepia
             // 
