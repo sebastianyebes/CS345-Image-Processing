@@ -33,8 +33,8 @@
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.originalImage = new System.Windows.Forms.PictureBox();
+            this.processedImage = new System.Windows.Forms.PictureBox();
             this.Histogram = new System.Windows.Forms.Button();
             this.Sepia = new System.Windows.Forms.Button();
             this.Subtraction = new System.Windows.Forms.Button();
@@ -46,8 +46,8 @@
             this.SaveFileDialog = new System.Windows.Forms.SaveFileDialog();
             textBox6 = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.originalImage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.processedImage)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox6
@@ -97,25 +97,25 @@
             this.saveToolStripMenuItem.Text = "Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
-            // pictureBox1
+            // originalImage
             // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(55, 64);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(299, 284);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.originalImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.originalImage.Location = new System.Drawing.Point(55, 64);
+            this.originalImage.Name = "originalImage";
+            this.originalImage.Size = new System.Drawing.Size(299, 284);
+            this.originalImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.originalImage.TabIndex = 1;
+            this.originalImage.TabStop = false;
             // 
-            // pictureBox2
+            // processedImage
             // 
-            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox2.Location = new System.Drawing.Point(426, 64);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(299, 284);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
+            this.processedImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.processedImage.Location = new System.Drawing.Point(426, 64);
+            this.processedImage.Name = "processedImage";
+            this.processedImage.Size = new System.Drawing.Size(299, 284);
+            this.processedImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.processedImage.TabIndex = 2;
+            this.processedImage.TabStop = false;
             // 
             // Histogram
             // 
@@ -224,8 +224,8 @@
             this.Controls.Add(this.Subtraction);
             this.Controls.Add(this.Sepia);
             this.Controls.Add(this.Histogram);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.processedImage);
+            this.Controls.Add(this.originalImage);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.MinimumSize = new System.Drawing.Size(1044, 466);
@@ -234,8 +234,8 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.originalImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.processedImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -247,8 +247,8 @@
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox originalImage;
+        private System.Windows.Forms.PictureBox processedImage;
         private System.Windows.Forms.Button Histogram;
         private System.Windows.Forms.Button Sepia;
         private System.Windows.Forms.Button Subtraction;

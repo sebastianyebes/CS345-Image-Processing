@@ -36,19 +36,19 @@ namespace ImageProcessor
         private void OpenFileDialog_FileOk(object sender, CancelEventArgs e)
         {
             loaded = new Bitmap(OpenFileDialog.FileName);
-            pictureBox1.Image = loaded;
+            originalImage.Image = loaded;
         }
 
         private void Inversion_Click(object sender, EventArgs e)
         {
             ImageProcessLib.Inversion(ref loaded, ref processed);
-            pictureBox2.Image = processed;
+            processedImage.Image = processed;
         }
 
         private void Sepia_Click(object sender, EventArgs e)
         {
             ImageProcessLib.Sepia(ref loaded, ref processed);
-            pictureBox2.Image = processed;
+            processedImage.Image = processed;
         }
 
         private void Subtraction_Click(object sender, EventArgs e)
@@ -61,14 +61,14 @@ namespace ImageProcessor
         {
             if(SaveFileDialog.ShowDialog() == DialogResult.OK)
             {
-                pictureBox2.Image.Save(SaveFileDialog.FileName);
+                processedImage.Image.Save(SaveFileDialog.FileName);
             }
         }
 
         private void Greyscale_Click(object sender, EventArgs e)
         {
             ImageProcessLib.Greyscale(ref loaded, ref processed);
-            pictureBox2.Image = processed;
+            processedImage.Image = processed;
         }
     }
 }
