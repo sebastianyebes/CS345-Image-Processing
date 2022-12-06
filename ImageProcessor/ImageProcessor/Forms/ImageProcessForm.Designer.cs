@@ -45,6 +45,7 @@
             this.OpenFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.SaveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.CopyImage = new System.Windows.Forms.Button();
             textBox6 = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.originalImage)).BeginInit();
@@ -123,7 +124,7 @@
             // 
             this.Histogram.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Histogram.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Histogram.Location = new System.Drawing.Point(770, 222);
+            this.Histogram.Location = new System.Drawing.Point(881, 255);
             this.Histogram.Name = "Histogram";
             this.Histogram.Size = new System.Drawing.Size(95, 32);
             this.Histogram.TabIndex = 12;
@@ -134,7 +135,7 @@
             // 
             this.Sepia.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Sepia.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Sepia.Location = new System.Drawing.Point(881, 222);
+            this.Sepia.Location = new System.Drawing.Point(770, 255);
             this.Sepia.Name = "Sepia";
             this.Sepia.Size = new System.Drawing.Size(95, 32);
             this.Sepia.TabIndex = 13;
@@ -146,9 +147,10 @@
             // 
             this.Subtraction.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Subtraction.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Subtraction.Location = new System.Drawing.Point(825, 274);
+            this.Subtraction.Location = new System.Drawing.Point(814, 305);
+            this.Subtraction.MinimumSize = new System.Drawing.Size(95, 32);
             this.Subtraction.Name = "Subtraction";
-            this.Subtraction.Size = new System.Drawing.Size(102, 32);
+            this.Subtraction.Size = new System.Drawing.Size(112, 32);
             this.Subtraction.TabIndex = 15;
             this.Subtraction.Text = "Subtraction";
             this.Subtraction.UseVisualStyleBackColor = true;
@@ -158,7 +160,7 @@
             // 
             this.Greyscale.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Greyscale.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Greyscale.Location = new System.Drawing.Point(770, 170);
+            this.Greyscale.Location = new System.Drawing.Point(770, 203);
             this.Greyscale.Name = "Greyscale";
             this.Greyscale.Size = new System.Drawing.Size(95, 32);
             this.Greyscale.TabIndex = 16;
@@ -196,7 +198,7 @@
             // 
             this.Inversion.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Inversion.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Inversion.Location = new System.Drawing.Point(881, 170);
+            this.Inversion.Location = new System.Drawing.Point(881, 203);
             this.Inversion.Name = "Inversion";
             this.Inversion.Size = new System.Drawing.Size(95, 32);
             this.Inversion.TabIndex = 22;
@@ -220,11 +222,23 @@
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
+            // CopyImage
+            // 
+            this.CopyImage.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CopyImage.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.CopyImage.Location = new System.Drawing.Point(814, 156);
+            this.CopyImage.Name = "CopyImage";
+            this.CopyImage.Size = new System.Drawing.Size(112, 32);
+            this.CopyImage.TabIndex = 23;
+            this.CopyImage.Text = "Copy Image";
+            this.CopyImage.UseVisualStyleBackColor = true;
+            // 
             // ImageProcessForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1026, 419);
+            this.Controls.Add(this.CopyImage);
             this.Controls.Add(this.Inversion);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
@@ -268,6 +282,7 @@
         private System.Windows.Forms.OpenFileDialog OpenFileDialog;
         private System.Windows.Forms.SaveFileDialog SaveFileDialog;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private System.Windows.Forms.Button CopyImage;
     }
 }
 
