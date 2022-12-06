@@ -16,13 +16,13 @@ namespace ImageProcessor
         private void OpenImageDialog_FileOk(object sender, System.ComponentModel.CancelEventArgs e)
         {
             image = new Bitmap(OpenImageDialog.FileName);
-            pictureBox1.Image = image;
+            loadPicture.Image = image;
         }
 
         private void OpenBackgroundDialog_FileOk(object sender, System.ComponentModel.CancelEventArgs e)
         {
             background = new Bitmap(OpenBackgroundDialog.FileName);
-            pictureBox2.Image = background;
+            loadBg.Image = background;
         }
 
         private void LoadBackground_Click(object sender, EventArgs e)
@@ -33,7 +33,19 @@ namespace ImageProcessor
         private void Subtract_Click(object sender, EventArgs e)
         {
             ImageProcessLib.Subtract(ref image, ref background, ref processed);
-            pictureBox3.Image = processed;
+            processedPicture.Image = processed;
+        }
+
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog.Filter = "Bitmap Image|*.bmp";
+            SaveFileDialog.Title = "Save an Image File";
+            SaveFileDialog.ShowDialog();
+        }
+
+        private void SaveFileDialog_FileOk(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            processedPicture.Image.Save(SaveFileDialog.FileName);
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)

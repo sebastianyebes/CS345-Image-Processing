@@ -28,53 +28,54 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.loadPicture = new System.Windows.Forms.PictureBox();
+            this.loadBg = new System.Windows.Forms.PictureBox();
+            this.processedPicture = new System.Windows.Forms.PictureBox();
             this.LoadImage = new System.Windows.Forms.Button();
             this.LoadBackground = new System.Windows.Forms.Button();
             this.Subtract = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.OpenImageDialog = new System.Windows.Forms.OpenFileDialog();
             this.OpenBackgroundDialog = new System.Windows.Forms.OpenFileDialog();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.SaveFileDialog = new System.Windows.Forms.SaveFileDialog();
+            ((System.ComponentModel.ISupportInitialize)(this.loadPicture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loadBg)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.processedPicture)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // loadPicture
             // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(29, 48);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(299, 284);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
+            this.loadPicture.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.loadPicture.Location = new System.Drawing.Point(29, 48);
+            this.loadPicture.Name = "loadPicture";
+            this.loadPicture.Size = new System.Drawing.Size(299, 284);
+            this.loadPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.loadPicture.TabIndex = 2;
+            this.loadPicture.TabStop = false;
             // 
-            // pictureBox2
+            // loadBg
             // 
-            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox2.Location = new System.Drawing.Point(394, 48);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(299, 284);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
+            this.loadBg.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.loadBg.Location = new System.Drawing.Point(394, 48);
+            this.loadBg.Name = "loadBg";
+            this.loadBg.Size = new System.Drawing.Size(299, 284);
+            this.loadBg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.loadBg.TabIndex = 3;
+            this.loadBg.TabStop = false;
             // 
-            // pictureBox3
+            // processedPicture
             // 
-            this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox3.Location = new System.Drawing.Point(756, 48);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(299, 284);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 4;
-            this.pictureBox3.TabStop = false;
+            this.processedPicture.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.processedPicture.Location = new System.Drawing.Point(756, 48);
+            this.processedPicture.Name = "processedPicture";
+            this.processedPicture.Size = new System.Drawing.Size(299, 284);
+            this.processedPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.processedPicture.TabIndex = 4;
+            this.processedPicture.TabStop = false;
             // 
             // LoadImage
             // 
@@ -119,7 +120,7 @@
             this.fileToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1107, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1107, 30);
             this.menuStrip1.TabIndex = 19;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -129,8 +130,15 @@
             this.saveToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 26);
             this.fileToolStripMenuItem.Text = "File";
+            // 
+            // saveToolStripMenuItem
+            // 
+            this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.saveToolStripMenuItem.Text = "Save";
+            this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
@@ -138,12 +146,6 @@
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
-            // 
-            // saveToolStripMenuItem
-            // 
-            this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.saveToolStripMenuItem.Text = "Save";
             // 
             // OpenImageDialog
             // 
@@ -155,6 +157,10 @@
             this.OpenBackgroundDialog.FileName = "openFileDialog1";
             this.OpenBackgroundDialog.FileOk += new System.ComponentModel.CancelEventHandler(this.OpenBackgroundDialog_FileOk);
             // 
+            // SaveFileDialog
+            // 
+            this.SaveFileDialog.FileOk += new System.ComponentModel.CancelEventHandler(this.SaveFileDialog_FileOk);
+            // 
             // SubtractionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -163,16 +169,16 @@
             this.Controls.Add(this.Subtract);
             this.Controls.Add(this.LoadBackground);
             this.Controls.Add(this.LoadImage);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.processedPicture);
+            this.Controls.Add(this.loadBg);
+            this.Controls.Add(this.loadPicture);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "SubtractionForm";
             this.Text = "SubtractionForm";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loadPicture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loadBg)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.processedPicture)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -182,9 +188,9 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox loadPicture;
+        private System.Windows.Forms.PictureBox loadBg;
+        private System.Windows.Forms.PictureBox processedPicture;
         private System.Windows.Forms.Button LoadImage;
         private System.Windows.Forms.Button LoadBackground;
         private System.Windows.Forms.Button Subtract;
@@ -194,5 +200,6 @@
         private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
         private System.Windows.Forms.OpenFileDialog OpenImageDialog;
         private System.Windows.Forms.OpenFileDialog OpenBackgroundDialog;
+        private System.Windows.Forms.SaveFileDialog SaveFileDialog;
     }
 }
