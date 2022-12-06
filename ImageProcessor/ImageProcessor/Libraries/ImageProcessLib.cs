@@ -8,7 +8,6 @@ yebes77@gmail.com
 
 using System;
 using System.Drawing;
-using System.Windows.Forms;
 
 namespace ImageProcessorLib
 {
@@ -17,6 +16,7 @@ namespace ImageProcessorLib
         public static void Greyscale(ref Bitmap loaded, ref Bitmap processed)
         {
             processed = new Bitmap(loaded.Width, loaded.Height);
+
             for(int i = 0; i < loaded.Width; i++)
             {
                 for(int j = 0; j < loaded.Height; j++)
@@ -36,6 +36,7 @@ namespace ImageProcessorLib
         public static void Inversion(ref Bitmap loaded, ref Bitmap processed)
         {
             processed = new Bitmap(loaded.Width, loaded.Height);
+
             for (int i = 0; i < loaded.Width; i++)
             {
                 for (int j = 0; j < loaded.Height; j++)
@@ -57,6 +58,7 @@ namespace ImageProcessorLib
         public static void Sepia(ref Bitmap loaded, ref Bitmap processed)
         {
             processed = new Bitmap(loaded.Width, loaded.Height);
+
             for (int i = 0; i < loaded.Width; i++)
             {
                 for (int j = 0; j < loaded.Height; j++)
