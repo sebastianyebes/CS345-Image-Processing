@@ -114,5 +114,21 @@ namespace ImageProcessorLib
                 }
             }
         }
+
+        public static void CopyImage(ref Bitmap loaded, ref Bitmap processed)
+        {
+            processed = new Bitmap(loaded.Width, loaded.Height);
+
+            for (int i = 0; i < loaded.Width; i++)
+            {
+                for (int j = 0; j < loaded.Height; j++)
+                {
+                    Color pixel = loaded.GetPixel(i, j); 
+
+                    // Set pixel from the pixel we got in pixel variable
+                    processed.SetPixel(i, j, pixel);
+                }
+            }
+        }
     }
 }

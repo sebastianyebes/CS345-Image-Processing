@@ -67,6 +67,12 @@ namespace ImageProcessor
             this.Close();
         }
 
+        private void CopyImage_Click(object sender, EventArgs e)
+        {
+            ImageProcessLib.CopyImage(ref loaded, ref processed);
+            processedImage.Image = processed;
+        }
+
         private void Greyscale_Click(object sender, EventArgs e)
         {
             ImageProcessLib.Greyscale(ref loaded, ref processed);

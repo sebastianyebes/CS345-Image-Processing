@@ -232,6 +232,7 @@
             this.CopyImage.TabIndex = 23;
             this.CopyImage.Text = "Copy Image";
             this.CopyImage.UseVisualStyleBackColor = true;
+            this.CopyImage.Click += new System.EventHandler(this.CopyImage_Click);
             // 
             // ImageProcessForm
             // 
