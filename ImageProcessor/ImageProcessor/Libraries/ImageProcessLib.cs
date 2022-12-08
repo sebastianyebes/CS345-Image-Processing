@@ -197,7 +197,7 @@ namespace ImageProcessorLib
                     Color pixel = image.GetPixel(i, j);
                     Color backPixel = background.GetPixel(i, j);
 
-                    // Calculate formula for sepia
+                    // Calculate formula
                     int grey = (pixel.R + pixel.G + pixel.B) / 3;
                     int subtractValue = Math.Abs(grey - greyGreen);
 
